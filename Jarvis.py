@@ -1,5 +1,4 @@
 import openai
-# from apikey import api_data
 import pyttsx3
 import speech_recognition as sr
 import webbrowser
