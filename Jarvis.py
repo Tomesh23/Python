@@ -8,8 +8,8 @@ openai.api_key="paste your api key here "
 completion=openai.Completion()
 
 def Reply(question):
-    prompt=f'User: {question}\n Jarvis: '
-    response=completion.create(prompt=prompt, engine="text-davinci-002", stop=['\User'], max_tokens=200)
+    prompt=f'Chando: {question}\n Jarvis: '
+    response=completion.create(prompt=prompt, engine="text-davinci-002", stop=['\Chando'], max_tokens=200)
     answer=response.choices[0].text.strip()
     return answer
 
@@ -32,7 +32,7 @@ def takeCommand():
     try:
         print("Recognizing.....")
         query=r.recognize_google(audio, language='en-in')
-        print("User Said: {} \n".format(query))
+        print("Chando Said: {} \n".format(query))
     except Exception as e:
         print("Say That Again....")
         return "None"
